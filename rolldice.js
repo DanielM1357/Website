@@ -1,5 +1,5 @@
 document.getElementById('start-button').addEventListener('click', DiceStart);
 
-function DiceStart(){
+function Dicer(){
     alert('Hi')
 }
