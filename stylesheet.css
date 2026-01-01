@@ -2,18 +2,12 @@
 body {
 	background-color: rgb(128, 128, 0);
 	font-family: sans-serif;
-
 }
 
 nav {
 	width: 100%;
 	background-color: rgb(51,51,51);
 	border-radius: 6px;
-}
-
-footer {
-	font-size: 17px;
-	margin-left: 20px;
 }
 
 .menu {
@@ -27,11 +21,9 @@ footer {
 
 .menulink {
 	display: block;
-	color: black;
+	color: white;
 	text-align: center;
 	text-decoration: none;
-	/*border: 3px solid black;
-	border-radius: 12px;*/
 	padding: 15px 40px;
 
 }
@@ -40,13 +32,6 @@ footer {
 	color: black;
 	background-color: rgb(97,97,97);
 }
-
-/*nav a:link, nav a:visited {
-	text-decoration: none;
-	color: black;
-}*/
-
-
 
 .heading {
 	text-align: center;
@@ -158,30 +143,44 @@ h2 {
 }
 
 .vp {
-	margin-top: -5%;
-	margin-left: -20px;
+	margin-top: 5%;
+	margin-left: 0px;
 }
 
 .viframe {
 	/*display: inline-block;*/
 }
 
-.desc {
+.description {
 	margin-right: 120px;
 }
 
 .download {
-	border: 5px inset rgb(51,51,51);
+	border: 5px solid rgb(51,51,51);
+	border-radius: 6px;
 	background-color: rgb(51,51,51);
 	opacity: 0.9;
 	padding: 20px;
 	margin-top: 20px;
+	margin-bottom: 30px;
 	margin-left: 30%;
 	display: inline-block;
 }
 
-footer p {
+footer p, footer a {
 	font-size: 12px;
+	margin: 1px;
+	color: white;
+	display: inline-block;
+}
+
+footer {
+	background-color: rgb(51,51,51);
+	margin-left: 0;
+	margin-top: 20px ;
+	margin-bottom: 20px;
+	padding: 15px;
+	border-radius: 6px;
 }
 
 
@@ -191,7 +190,9 @@ footer p {
 	background-color: orange;
 	border-radius: 6px;
 	margin: auto;
+	margin-top: 50px;;
 	width: 50%;
+	height: 650px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -199,7 +200,28 @@ footer p {
 }
 
 .dice-img {
-	width: 600px;
-	height: 600px;
+	width: 400px;
+	height: 400px;
+}
 
+.title {
+	margin-top: 30px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#start-button {
+	margin-bottom: 30px;
+	border: none;
+	border-radius: 6px;
+	padding: 8px 15px;
+	cursor: pointer;
+}
+
+#start-button:hover {
+	background-color: rgb(224,224,224);
+}
+
+.dicerfooter {
+	margin-top: 10%;
 }

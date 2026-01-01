@@ -2,7 +2,9 @@
 <html lang="de">
 <head>
     <meta charset="utf-8">
+    <title>Roll the dice</title>
     <link href="stylesheet.css" rel="stylesheet"/>
+    <link rel="shortcut item" type="image/png" href="images/favicon_boulder.png"/>
     <title></title>
 </head>
 
@@ -24,11 +26,19 @@
 		</nav>
 
 		<div class="dicer">
-			<p>Roll the dice</p>
-			<img src="images/d20/d20_yellow_20.png" alt="dice" class="dice-img">
-			<button id="start-button">Hier</button>
+			<div class="title">Roll the dice - D20</div>
+			<div class="dice">
+				<img src="images/d20/d20_yellow_20.png" alt="dice" class="dice-img" id="dice-img">
+			</div>
+			<div class="start-button">
+				<button id="start-button">Press to roll the dice</button>
+			</div>
 			<script src="rolldice.js"></script>
 		</div>
+
+		<footer class="dicerfooter">
+			<p>Bilder von ...</p>
+		</footer>
 
 </body>
 </html>
