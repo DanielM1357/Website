@@ -10,6 +10,37 @@ nav {
 	border-radius: 6px;
 }
 
+footer p, footer a {
+	font-size: 12px;
+	margin: 1px;
+	color: white;
+	display: inline-block;
+}
+
+footer {
+	background-color: rgb(51,51,51);
+	margin-left: 0;
+	margin-top: 20px ;
+	margin-bottom: 20px;
+	padding: 15px;
+	border-radius: 6px;
+}
+
+h2 {
+	margin-left: 20px;
+	font-style: bold;
+}
+
+hr {
+	height: 3px;
+	width: 90%;
+	background-color: rgb(51,51,51);
+	border-color: rgb(51,51,51);
+	border-radius: 50px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
 .menu {
 	list-style-type: none;
 	overflow: hidden;
@@ -54,21 +85,6 @@ nav {
 	border: 4px solid black;
 }
 
-hr {
-	height: 3px;
-	width: 90%;
-	background-color: rgb(51,51,51);
-	border-color: rgb(51,51,51);
-	border-radius: 50px;
-	margin-top: 30px;
-	margin-bottom: 30px;
-}
-
-
-h2 {
-	margin-left: 20px;
-	font-style: bold;
-}	
 
 .mainpage {
 	border: 4px solid rgb(51,51,51);
@@ -89,6 +105,10 @@ h2 {
 	color: white;
 }
 
+.section1 {
+
+}
+
 .data-type {
 	display: inline-block;
 	text-align: left;
@@ -104,6 +124,10 @@ h2 {
 
 .section2{
 	/*text-align: center;*/
+}
+
+.section2 p {
+	margin-left: 0;
 }
 
 .interests {
@@ -143,16 +167,29 @@ h2 {
 }
 
 .vp {
-	margin-top: 5%;
+	margin-top: 2%;
 	margin-left: 0px;
+	background-color: rgb(51,51,51);
+	border-radius: 6px;
+	padding: 5px;
+	padding-left: 15px;
 }
 
 .viframe {
 	/*display: inline-block;*/
 }
 
+.description p {
+	/*display: inline-block;*/
+	background-color: rgb(51,51,51);
+	border-radius: 6px;
+	opacity: 0.8;
+	padding: 20px;
+}
+
 .description {
-	margin-right: 120px;
+	margin-right: 220px;
+
 }
 
 .download {
@@ -167,27 +204,11 @@ h2 {
 	display: inline-block;
 }
 
-footer p, footer a {
-	font-size: 12px;
-	margin: 1px;
-	color: white;
-	display: inline-block;
-}
-
-footer {
-	background-color: rgb(51,51,51);
-	margin-left: 0;
-	margin-top: 20px ;
-	margin-bottom: 20px;
-	padding: 15px;
-	border-radius: 6px;
-}
-
-
 /*dicer*/
 
 .dicer {
 	background-color: orange;
+	border: 6px solid rgb(205,104,57);
 	border-radius: 6px;
 	margin: auto;
 	margin-top: 50px;;
@@ -224,4 +245,18 @@ footer {
 
 .dicerfooter {
 	margin-top: 10%;
+}
+
+/*infopage*/
+
+#form {
+	margin-top: 20px;
+}
+
+form {
+
+}
+
+label {
+	display: block;
 }

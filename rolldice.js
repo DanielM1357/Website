@@ -6,6 +6,7 @@ function Dicer() {
 }
 
 function DiceRoll() {
+    //returns random number from 0 to 0.99
     return Math.floor(Math.random() * 20) + 1;
 
 }
@@ -18,7 +19,6 @@ async function DiceAnimation() {
         imageTag.src = 'images/d20/d20_yellow_' + randomImageNumber + '.png';
         console.log(i);
     }
-    //Hier eigentliche Dicer Funktion einfügen
     var randomNumber = DiceRoll();
     var imageTag = document.getElementById('dice-img');
     imageTag.src = 'images/d20/d20_yellow_' + randomNumber + '.png';
