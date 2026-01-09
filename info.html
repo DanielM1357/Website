@@ -56,25 +56,36 @@
 
   <div class="mainpage" id="form">
 			<p>HI</p>
-			<form>
 
+			<form action="test.txt" method="post">
 				<fieldset>
-					<legend>Senden Sie mir gerne eine Nachricht:
+				<!--input inside the label or outside? w3 says inside - freecodecamp the opposite-->
+					<legend>Falls Sie Interesse am Thema haben oder mehr wissen möchten senden Sie mir eine Nachricht:
 					</legend>
-					<label>Nachricht:
-						<input type="text">
+					<label for="msg">
+						Ihre Nachricht:
+						<br>
+						<textarea id="msg" name="msg" rows="10" cols="100" required></textarea>
 					</label>
 					<label>
 						Falls Sie eine Antwort erhalten möchten:
-						<input type="text">
+						<input type="email" placeholder="E-Mail Adresse">
 					</label>
 					<label>
+						Möchten Sie einen Newsletter erhalten?
+						<br>
 						<input type="radio">Ja
 					</label>
 					<label>
 						<input type="radio">Nein
 					</label>
+					<label> Wie ist Ihre Stimmung heute?
+						<br>
+						0 <input type="range" min="0" max="10"> 10
+					</label>
+					<input type="submit" value="press">
 				</fieldset>
+			</form>
   </div>
 
   </main>
