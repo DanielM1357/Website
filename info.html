@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <link href="stylesheet.css" rel="stylesheet"/>
   <link rel="shortcut icon" type="image/png" href="images/favicon_boulder.png"/>
-
+  <!-- defer: script will only be executed if DOM-tree is loaded-->
   <title></title>
 </head>
 <body>
@@ -55,38 +55,51 @@
   </div>
 
   <div class="mainpage" id="form">
-			<p>HI</p>
 
-			<form action="test.txt" method="post">
+			<form method="post" id="contact-form">
 				<fieldset>
-				<!--input inside the label or outside? w3 says inside - freecodecamp the opposite-->
-					<legend>Falls Sie Interesse am Thema haben oder mehr wissen möchten senden Sie mir eine Nachricht:
+				<!--id - for JS; name for key value pairs of form data sent-->
+					<legend>
+						Falls Sie Interesse am Thema haben oder mehr wissen möchten senden Sie mir eine Nachricht:
 					</legend>
+
+					<label for="name">
+						Name:
+					</label>
+						<div class="input">
+							<input id="name" name="name" type="text">
+						</div>
+						<div class="errorDiv"> Test</div>
+
 					<label for="msg">
 						Ihre Nachricht:
-						<br>
-						<textarea id="msg" name="msg" rows="10" cols="100" required></textarea>
 					</label>
-					<label>
+					<textarea id="msg" name="msg" rows="10" cols="100"></textarea>
+
+					<label for"mail">
 						Falls Sie eine Antwort erhalten möchten:
-						<input type="email" placeholder="E-Mail Adresse">
 					</label>
-					<label>
+					<div class="input">
+						<input type="email" placeholder="E-Mail Adresse" id="mail" name="mail">
+					</div>
+					<label for"yes">
 						Möchten Sie einen Newsletter erhalten?
-						<br>
-						<input type="radio">Ja
 					</label>
-					<label>
-						<input type="radio">Nein
-					</label>
-					<label> Wie ist Ihre Stimmung heute?
-						<br>
-						0 <input type="range" min="0" max="10"> 10
-					</label>
-					<input type="submit" value="press">
+					<div class="input">
+						<input type="radio" id="yes" name="newsletter">Ja
+						<input type="radio" id="no" name="newsletter">Nein
+					</div>
+					<label for="mood"> Wie ist Ihre Stimmung heute?</label>
+					<div class="input">
+						0 <input type="range" min="0" max="10" id="mood" name="mood"> 10
+					</div>
+
+					<div class="error">Fehler</div>
+					<input type="submit" id="submit" value="Nachricht senden" class="input">
 				</fieldset>
 			</form>
   </div>
+  <script src="validation.js"></script>
 
   </main>
 
