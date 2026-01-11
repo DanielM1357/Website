@@ -69,32 +69,38 @@
 						<div class="input">
 							<input id="name" name="name" type="text">
 						</div>
-						<div class="errorDiv"> Test</div>
+						<div class="errorDiv"></div>
 
 					<label for="msg">
 						Ihre Nachricht:
 					</label>
-					<textarea id="msg" name="msg" rows="10" cols="100"></textarea>
+						<div>
+							<textarea id="msg" name="msg" rows="10" cols="100"></textarea>
+						</div>
+						<div class="errorDiv"></div>
 
 					<label for"mail">
 						Falls Sie eine Antwort erhalten möchten:
 					</label>
-					<div class="input">
-						<input type="email" placeholder="E-Mail Adresse" id="mail" name="mail">
-					</div>
+						<div class="input">
+							<input type="text" placeholder="E-Mail Adresse" id="mail" name="mail">
+						</div>
+						<div class="errorDiv"></div>
+
 					<label for"yes">
 						Möchten Sie einen Newsletter erhalten?
 					</label>
-					<div class="input">
+					<div class="input" id="radio">
 						<input type="radio" id="yes" name="newsletter">Ja
 						<input type="radio" id="no" name="newsletter">Nein
 					</div>
+
 					<label for="mood"> Wie ist Ihre Stimmung heute?</label>
 					<div class="input">
 						0 <input type="range" min="0" max="10" id="mood" name="mood"> 10
 					</div>
 
-					<div class="error">Fehler</div>
+					<div class="error"></div>
 					<input type="submit" id="submit" value="Nachricht senden" class="input">
 				</fieldset>
 			</form>

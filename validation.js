@@ -5,6 +5,7 @@ const msg = document.getElementById("msg");
 const mail = document.getElementById("mail");
 const submit = document.getElementById("submit");
 
+let regMail = new RegExp ("^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+.[a-z]+$");
 let allErrorDiv = document.querySelectorAll(".errorDiv"); // wählt alle mit der class errorDiv
 
 let errorMessageName = [];
@@ -13,8 +14,8 @@ let errorMessageMail = [];
 
 
 name.addEventListener("input", checkInputName);
-//mail.addEventListener("input", checkInputMail);
-//msg.addEventListener("input", checkInputMsg);
+msg.addEventListener("input", checkInputMsg);
+mail.addEventListener("input", checkInputMail);
 
 
 
@@ -23,7 +24,7 @@ function checkInputName() {
     let errorName = [];
 
     errorName.push(checkEmpty(name, errorMessageName)); //push = append
-    errorName.push(checkMinMax(name, 3,100,errorMessageName)); // checkEmpty                      returns boolean
+    errorName.push(checkMinMax(name, 3,100,errorMessageName)); // check-function returns boolean
 
     if (errorName.includes(false)) {
         //showError(inputName.id);
@@ -34,9 +35,37 @@ function checkInputName() {
     }
 }
 
+function checkInputMsg () {
+    let errorMsg = [];
+
+    errorMsg.push(checkEmpty(msg, errorMessageMsg));
+
+    if (errorMsg.includes(false)) {
+        allErrorDiv[1].textContent = errorMessageMsg.join("");
+    }
+    else {
+        allErrorDiv[1].textContent = "";
+    }
+}
+
+function checkInputMail () {
+
+    let errorMail = [];
+
+    errorMail.push(checkMail(mail, errorMessageMail));
+    errorMail.push(checkMinMax(mail, 5, 50, errorMessageMail));
+
+    if (errorMail.includes(false)) {
+        allErrorDiv[2].textContent = errorMessageMail.join("");
+    }
+    else {
+        allErrorDiv[2].textContent = "";
+    }
+}
+
 function checkMinMax(inp, min, max, arrayMessage) {
     if (inp.value.length < min) {
-        arrayMessage[1] = "Mindestens" + min + "Zeichen\n";
+        arrayMessage[1] = "Mindestens " + min + " Zeichen\n";
         return false;
     }
     else if (inp.value.length > max) {
@@ -53,11 +82,22 @@ function checkMinMax(inp, min, max, arrayMessage) {
 function checkEmpty(inp, arrayMessage) {
     //trim for deleting spaces out of the string
     if (inp.value.trim() === "") {
-        arrayMessage[0] = "Bitte geben Sie einen Namen ein\n";
+        arrayMessage[0] = "Bitte füllen Sie dieses Feld aus\n";
         return false;
     }
     else {
         arrayMessage[0] = "";
+        return true;
+    }
+}
+
+function checkMail(inp, arrayMessage) {
+    if (!regMail.test(inp.value)) {
+        arrayMessage[3] = "Format ungültig";
+        return false;
+    }
+    else {
+        arrayMessage[3] = "";
         return true;
     }
 }

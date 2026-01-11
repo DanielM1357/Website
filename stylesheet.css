@@ -247,6 +247,7 @@ hr {
 	margin-top: 10%;
 }
 
+
 /*infopage*/
 
 #form {
@@ -270,15 +271,41 @@ fieldset {
 	padding: 20px;
 }
 
-.input {
+label {
 	display: block;
 	margin-top: 10px;
 }
 
+input, textarea {
+	border-radius: 3px;
+}
+
+textarea {
+	margin-top: 5px;
+	border: 1px solid rgb(20,20,20);
+	background-color: darkgrey;
+}
+
+.input {
+	margin-top: 10px;
+}
+
 .errorDiv {
-	color: red;
+	display: inline-block;
+	color: black;
+	background-color: rgb(238,221,130);
+	border: 1px solid black;
+	border-radius: 3px;
 	white-space: pre-wrap;
+	font-size: 11px;
+	margin-top: 10px;
+	padding: 3px 10px;
 	/* 	pre-wrap for \n to work in the validation file */
+}
+
+/* hide div if empty */
+.errorDiv:empty {
+	visibility: hidden;
 }
 
 .error {
@@ -294,13 +321,7 @@ fieldset {
 	background-color: darkgrey;
 }
 
-label {
-	display: block;
-	margin-top: 10px;
+#mood, #radio {
+	margin-bottom: 20px;
 }
 
-textarea {
-	margin-top: 5px;
-	border: 1px solid rgb(20,20,20);
-	background-color: darkgrey;
-}
