@@ -3,7 +3,6 @@ const form = document.getElementById("contact-form");
 const name = document.getElementById("name");
 const msg = document.getElementById("msg");
 const mail = document.getElementById("mail");
-const submit = document.getElementById("submit");
 
 let regMail = new RegExp ("^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+.[a-z]+$");
 let allErrorDiv = document.querySelectorAll(".errorDiv"); // wählt alle mit der class errorDiv
@@ -16,6 +15,7 @@ let errorMessageMail = [];
 name.addEventListener("input", checkInputName);
 msg.addEventListener("input", checkInputMsg);
 mail.addEventListener("input", checkInputMail);
+form.addEventListener("submit", formSubmission);
 
 
 
@@ -100,4 +100,8 @@ function checkMail(inp, arrayMessage) {
         arrayMessage[3] = "";
         return true;
     }
+}
+
+function formSubmission() {
+    alert('Vielen Dank für die Eingabe! Aufgrund technischer Limitierungen wird Ihre Nachricht derzeit nicht weiterverarbeitet');
 }
