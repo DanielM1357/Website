@@ -12,15 +12,15 @@ function DiceRoll() {
 }
 
 async function DiceAnimation() {
-    for (var i = 0; i < 11; i++) {
+    for (let i = 0; i < 11; i++) {
         await sleep(150);
-        var imageTag = document.getElementById('dice-img');
+        const imageTag = document.getElementById('dice-img');
         let randomImageNumber = DiceRoll();
         imageTag.src = 'images/d20/d20_yellow_' + randomImageNumber + '.png';
         console.log(i);
     }
-    var randomNumber = DiceRoll();
-    var imageTag = document.getElementById('dice-img');
+    let randomNumber = DiceRoll();
+    const imageTag = document.getElementById('dice-img');
     imageTag.src = 'images/d20/d20_yellow_' + randomNumber + '.png';
     console.log(randomNumber, 'Hi');
 }
